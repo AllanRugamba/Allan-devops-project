@@ -29,6 +29,7 @@ public class SortingTest {
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         page = browser.newPage();
         page.navigate("https://practicesoftwaretesting.com/");
+        page.waitForLoadState();
         sortingPage = new SortingPage(page);
     }
 
