@@ -26,7 +26,7 @@ public class SortingTest {
     @BeforeMethod
     public void setup() {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         page = browser.newPage();
         page.navigate("https://practicesoftwaretesting.com/");
         sortingPage = new SortingPage(page);
