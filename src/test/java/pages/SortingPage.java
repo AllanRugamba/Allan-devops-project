@@ -20,20 +20,20 @@ public class SortingPage {
     }
 
     public void sortByNameAZ() {
-        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setTimeout(60000));
-        page.selectOption("[data-test='sort']", "name,asc");
+        page.waitForSelector(".form-select", new Page.WaitForSelectorOptions().setTimeout(60000));
+        page.selectOption(".form-select", "name,asc");
         page.waitForTimeout(2000);
     }
 
     public void sortByNameZA() {
-        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setTimeout(60000));
-        page.selectOption("[data-test='sort']", "name,desc");
+        page.waitForSelector(".form-select", new Page.WaitForSelectorOptions().setTimeout(60000));
+        page.selectOption(".form-select", "name,desc");
         page.waitForTimeout(2000);
     }
 
     public void sortByPriceLowToHigh() {
-        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setTimeout(60000));
-        page.selectOption("[data-test='sort']", "price,asc");
+        page.waitForSelector(".form-select", new Page.WaitForSelectorOptions().setTimeout(60000));
+        page.selectOption(".form-select", "price,asc");
         page.waitForTimeout(2000);
     }
 
