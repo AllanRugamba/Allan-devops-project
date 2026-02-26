@@ -2,6 +2,7 @@ package pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.WaitForSelectorState;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,19 +21,19 @@ public class SortingPage {
     }
 
     public void sortByNameAZ() {
-        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setTimeout(60000));
+        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setState(WaitForSelectorState.ATTACHED).setTimeout(60000));
         page.selectOption("[data-test='sort']", "name,asc");
         page.waitForTimeout(2000);
     }
 
     public void sortByNameZA() {
-        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setTimeout(60000));
+        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setState(WaitForSelectorState.ATTACHED).setTimeout(60000));
         page.selectOption("[data-test='sort']", "name,desc");
         page.waitForTimeout(2000);
     }
 
     public void sortByPriceLowToHigh() {
-        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setTimeout(60000));
+        page.waitForSelector("[data-test='sort']", new Page.WaitForSelectorOptions().setState(WaitForSelectorState.ATTACHED).setTimeout(60000));
         page.selectOption("[data-test='sort']", "price,asc");
         page.waitForTimeout(2000);
     }
